@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\app\db\base.py", line 3, in <module>
+    from app.models.user import User
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\app\models\user.py", line 6, in <module>
+    class User(Base):
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_api.py", line 199, in __init__
+    _as_declarative(reg, cls, dict_)
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 245, in _as_declarative
+    return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 326, in setup_mapping
+    return _ClassScanMapperConfig(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 562, in __init__
+    self._scan_attributes()
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 784, in _scan_attributes
+    locally_collected_columns = self._produce_column_copies(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 1411, in _produce_column_copies
+    collected_annotation = self._collect_annotation(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\decl_base.py", line 1302, in _collect_annotation
+    extracted = _extract_mapped_subtype(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Samuel F\Documents\projetos\finance\FinanAppDeep\backend\venv\Lib\site-packages\sqlalchemy\orm\util.py", line 2366, in _extract_mapped_subtype
+    raise orm_exc.MappedAnnotationError(
+sqlalchemy.orm.exc.MappedAnnotationError: Type annotation for "User.id" can't be correctly interpreted for Annotated Declarative Table form.  ORM annotations should normally make use of the ``Mapped[]`` generic type, or other ORM-compatible generic type, as a container for the actual type, which indicates the intent that the attribute is mapped. Class variables that are not intended to be mapped by the ORM should use ClassVar[].  To allow Annotated Declarative to disregard legacy annotations which don't use Mapped[] to pass, set "__allow_unmapped__ = True" on the class or a superclass this class. (Background on this error at: https://sqlalche.me/e/20/zlpr)
